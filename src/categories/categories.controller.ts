@@ -6,7 +6,8 @@ export class CategoriesController {
     { id: 1, name: 'cars' },
     { id: 2, name: 'property' },
     { id: 3, name: 'jobs' },
-    { id: 4, name: 'services' }
+    { id: 4, name: 'services' },
+    { id: 5, name: 'mobile-phones' },
   ];
 
   @Get()

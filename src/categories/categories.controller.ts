@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Head, Header } from '@nestjs/common';
 
 @Controller('categories')
 export class CategoriesController {
@@ -10,6 +10,7 @@ export class CategoriesController {
   ];
 
   @Get()
+  @Header('Cache-Control', 'public, max-age=3600')
   getCategories() {
     return this.staticCategories;
   }

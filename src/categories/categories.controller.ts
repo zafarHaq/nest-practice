@@ -11,7 +11,7 @@ export class CategoriesController {
   ];
 
   @Get()
-  @Header('Cache-Control', 'public, max-age=3600')
+  @Header('Cache-Control', 'public, max-age=0, s-maxage=3600, must-revalidate')
   getCategories() {
     return this.staticCategories;
   }
